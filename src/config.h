@@ -6,7 +6,7 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 /* ref: http://freedesktop.org/software/fontconfig/fontconfig-user.html */
-static char *font = "Inconsolata:pixelsize=16:antialias=true:autohint=true;";
+static char *font = "Inconsolata:pixelsize=24:antialias=true:autohint=true;";
 
 /* exec precedence: -e arg, utmp option, SHELL env var, /etc/passwd shell */
 static char *shell = "\0";
