@@ -6,7 +6,7 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 /* ref: http://freedesktop.org/software/fontconfig/fontconfig-user.html */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true;";
+static char *font = "Inconsolata:pixelsize=16:antialias=true:autohint=true;";
 
 /* exec precedence: -e arg, utmp option, SHELL env var, /etc/passwd shell */
 static char *shell = "\0";
@@ -46,9 +46,9 @@ static int bellvolume = 100;
  *
  *	stty tabs
  */
-static unsigned int tabspaces = 8;
+static unsigned int tabspaces = 4;
 /* bg opacity */
-static int alpha = 0xff;
+static int alpha = 0xcc;
 
 
 /* other */
@@ -62,22 +62,22 @@ static unsigned int xfps = 120;
 static unsigned int actionfps = 30;
 static char *termname = "st-256color";
 static char *colorname[] = {
-	"#1e1e1e",
-	"#cf6a4c",
-	"#8f9d6a",
-	"#f9ee98",
-	"#7587a6",
-	"#9b859d",
-	"#afc4db",
-	"#a7a7a7",
-	"#5f5a60",
-	"#cda869",
-	"#323537",
-	"#464b50",
-	"#838184",
-	"#c3c3c3",
-	"#9b703f",
-	"#ffffff",
+	"#1b1918",
+	"#f22c40",
+	"#5ab738",
+	"#d5911a",
+	"#407ee7",
+	"#6666ea",
+	"#00ad9c",
+	"#a8a19f",
+	"#766e6b",
+	"#f22c40",
+	"#5ab738",
+	"#d5911a",
+	"#407ee7",
+	"#6666ea",
+	"#00ad9c",
+	"#f1efee",
 
 	[255] = 0,
 
@@ -150,8 +150,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.f =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_Insert,      clippaste,      {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
+	{ ControlMask|ShiftMask,XK_C,           clipcopy,       {.i =  0} },
+	{ ControlMask|ShiftMask,XK_V,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
   { MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 	{ MODKEY,               'u',            externalpipe,   {.v = "xurls | eval dmenu $(dmenu_options) | xargs -r $BROWSER" } },
